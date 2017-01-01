@@ -19,6 +19,10 @@
     </tbody>
   </table>
 
+  <div class="text-center">
+  <%= will_paginate @posts %>
+</div>
+
   <div class="group">
     <%= link_to("Write a Post", new_group_post_path(@group), class: "btn btn-default pull-right")%>
       <% if current_user && current_user == @group.user %>
